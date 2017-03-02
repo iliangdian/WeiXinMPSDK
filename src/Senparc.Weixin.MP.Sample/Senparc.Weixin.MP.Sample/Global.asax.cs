@@ -47,9 +47,9 @@ namespace Senparc.Weixin.MP.Sample
 
 
             /* 微信配置开始
-             * 
-             * 建议按照以下顺序进行注册，尤其须将缓存放在第一位！
-             */
+                * 
+                * 建议按照以下顺序进行注册，尤其须将缓存放在第一位！
+                */
 
             RegisterWeixinCache();      //注册分布式缓存（按需，如果需要，必须放在第一个）
             ConfigWeixinTraceLog();     //配置微信跟踪日志（按需）
@@ -95,7 +95,7 @@ namespace Senparc.Weixin.MP.Sample
         }
 
         /// <summary>
-        /// 注册WebSocket模块（可用于小程序或独立WebSocket英勇）
+        /// 注册WebSocket模块（可用于小程序或独立WebSocket应用）
         /// </summary>
         private void RegisterWebSocket()
         {
