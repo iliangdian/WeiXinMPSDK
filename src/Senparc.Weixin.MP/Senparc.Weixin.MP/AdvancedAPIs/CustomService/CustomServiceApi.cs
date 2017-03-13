@@ -378,6 +378,9 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         }
         #endregion
 
+
+#if NET451
+
         #region 异步请求
 
 
@@ -712,5 +715,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         }
         #endregion
+        
+#endif
     }
 }

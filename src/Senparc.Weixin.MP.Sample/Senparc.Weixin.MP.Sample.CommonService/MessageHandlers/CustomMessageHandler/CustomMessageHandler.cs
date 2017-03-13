@@ -421,7 +421,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
             responseMessage.Content = "您发送了一条视频信息，ID：" + requestMessage.MediaId;
 
             #region 上传素材并推送到客户端
-
+#if NET451
             Task.Factory.StartNew(async () =>
              {
                  //上传素材
@@ -443,7 +443,7 @@ namespace Senparc.Weixin.MP.Sample.CommonService.CustomMessageHandler
                      await CustomApi.SendTextAsync(appId, base.WeixinOpenId, msg);
                  }
              });
-
+#endif
             #endregion
 
             return responseMessage;

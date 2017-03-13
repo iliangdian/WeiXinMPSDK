@@ -15,6 +15,7 @@ namespace Senparc.Weixin.MP.Sample.Tests.Controllers
         int requestNum = 100;
         ManualResetEvent allDone = new ManualResetEvent(false);
 
+#if NET451
         private void RequestUrl(string address)
         {
             //运行此测试方法需要先准备好已经部署好且可以访问的网站，或运行VS的IIS Express。
@@ -55,5 +56,7 @@ namespace Senparc.Weixin.MP.Sample.Tests.Controllers
         {
             RequestUrl("http://localhost:18666/WeixinAsync/ForTest");
         }
+
+#endif
     }
 }

@@ -114,6 +114,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
                 return new WxJsonResult() { errcode = ReturnCode.请求成功, errmsg = "ok" };//无实际意义
             }, accessTokenOrAppId);
         }
+#if NET451
 
         /// <summary>
         /// 获取临时素材（原下载媒体文件），保存到指定文件夹
@@ -132,6 +133,9 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
             }, accessTokenOrAppId);
             return result.errmsg;
         }
+        
+#endif
+
         #endregion
 
         #region 永久素材
@@ -393,7 +397,9 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
         #endregion
         #endregion
 
+#if NET451
         #region 异步处理
+
         #region 临时素材
         /// <summary>
         /// 【异步方法】新增临时素材（原上传媒体文件）
@@ -473,6 +479,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs
 
         #endregion
 
-
+        #endregion
+#endif
     }
 }

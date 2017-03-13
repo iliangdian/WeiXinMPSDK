@@ -92,6 +92,7 @@ namespace Senparc.Weixin.HttpUtility
             }
         }
 
+#if NET451
         /// <summary>
         /// 从Url下载，并保存到指定目录
         /// </summary>
@@ -119,7 +120,10 @@ namespace Senparc.Weixin.HttpUtility
             }
             return null;
         }
+#endif
+
         #endregion
+#if NET451
 
         #region 异步方法
 
@@ -208,6 +212,7 @@ namespace Senparc.Weixin.HttpUtility
             return null;
         }
         #endregion
-
+        
+#endif
     }
 }
