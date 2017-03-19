@@ -109,12 +109,12 @@
             <param name="getNewToken"></param>
             <param name="name">标记Component名称（如微信公众号名称），帮助管理员识别</param>
         </member>
-        <member name="F:Senparc.Weixin.Open.Containers.ComponentContainer.GetComponentVerifyTicketFunc">
+        <member name="P:Senparc.Weixin.Open.Containers.ComponentContainer.GetComponentVerifyTicketFunc">
             <summary>
             获取ComponentVerifyTicket的方法
             </summary>
         </member>
-        <member name="F:Senparc.Weixin.Open.Containers.ComponentContainer.GetAuthorizerRefreshTokenFunc">
+        <member name="P:Senparc.Weixin.Open.Containers.ComponentContainer.GetAuthorizerRefreshTokenFunc">
             <summary>
             从数据库中获取已存的AuthorizerAccessToken的方法
             </summary>
@@ -318,15 +318,14 @@
             <param name="expiresIn"></param>
         </member>
         <member name="M:Senparc.Weixin.Open.Containers.AuthorizerContainer.RefreshAuthorizerToken(System.String,System.String,System.String,System.String)">
-             <summary>
-             刷新AuthorizerToken
-            
-             </summary>
-             <param name="componentAccessToken"></param>
-             <param name="componentAppId"></param>
-             <param name="authorizerAppid"></param>
-             <param name="refreshToken"></param>
-             <returns></returns>
+            <summary>
+            刷新AuthorizerToken
+            </summary>
+            <param name="componentAccessToken"></param>
+            <param name="componentAppId"></param>
+            <param name="authorizerAppid"></param>
+            <param name="refreshToken"></param>
+            <returns></returns>
         </member>
         <member name="M:Senparc.Weixin.Open.Containers.AuthorizerContainer.TryGetJsApiTicket(System.String,System.String,System.Boolean)">
             <summary>
@@ -526,7 +525,7 @@
             <param name="timeOut">代理请求超时时间（毫秒）</param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Senparc.Weixin.Open.ComponentAPIs.ComponentApi.GetJsApiTicket(System.String,System.String)" -->
+        <!-- 对于成员“M:Senparc.Weixin.Open.ComponentAPIs.ComponentApi.GetJsApiTicket(System.String,System.String)”忽略有格式错误的 XML 注释 -->
         <member name="T:Senparc.Weixin.Open.ComponentAPIs.AuthorizerOptionResult">
             <summary>
             获取授权方的选项设置信息返回结果
@@ -654,6 +653,11 @@
         <member name="P:Senparc.Weixin.Open.Entities.Request.PostModel.Encrypt_Type">
             <summary>
             加密类型，通常为"aes"
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.Open.Entities.SuccessResponseMessage">
+            <summary>
+            只返回"success"等指定字符串的响应信息
             </summary>
         </member>
         <member name="T:Senparc.Weixin.Open.RequestMessageUpdateAuthorized">
@@ -954,7 +958,7 @@
             作者注：其实这个格式称不上JSON，只是个单纯数组。
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:Senparc.Weixin.Open.QRConnect.QRConnectUserInfo.unionid" -->
+        <!-- 对于成员“P:Senparc.Weixin.Open.QRConnect.QRConnectUserInfo.unionid”忽略有格式错误的 XML 注释 -->
         <member name="T:Senparc.Weixin.Open.OAuthAPIs.OAuthApi">
             <summary>
             代公众号发起网页授权
@@ -1055,7 +1059,7 @@
             作者注：其实这个格式称不上JSON，只是个单纯数组。
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:Senparc.Weixin.Open.OAuthAPIs.OAuthUserInfo.unionid" -->
+        <!-- 对于成员“P:Senparc.Weixin.Open.OAuthAPIs.OAuthUserInfo.unionid”忽略有格式错误的 XML 注释 -->
         <member name="T:Senparc.Weixin.Open.RequestMessageFactory">
             <summary>
             RequestMessage工厂

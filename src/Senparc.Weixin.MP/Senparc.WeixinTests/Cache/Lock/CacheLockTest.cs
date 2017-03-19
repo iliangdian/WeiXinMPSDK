@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Senparc.Weixin.Cache;
-using Senparc.Weixin.Cache.Redis;
+//using Senparc.Weixin.Cache.Redis;
 
 namespace Senparc.WeixinTests.Cache.Lock
 {

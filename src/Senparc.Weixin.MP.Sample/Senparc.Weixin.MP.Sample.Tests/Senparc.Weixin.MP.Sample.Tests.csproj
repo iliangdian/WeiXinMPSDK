@@ -127,7 +127,6 @@
     <Compile Include="Controllers\WeixinControllerAsyncTest.cs" />
     <Compile Include="Controllers\WeixinControllerTest.cs" />
     <Compile Include="Controllers\FixWeixinBugWeixinResultTest.cs" />
-    <Compile Include="Controllers\WxOpen\WxOpenControllerTests.cs" />
     <Compile Include="MessageHandlers\CustomMessageHandler\CustomMessageHandlerTests.cs" />
     <Compile Include="Mock\MvcMockHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
