@@ -734,6 +734,11 @@
             匹配的关键词列表
             </summary>
         </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.AutoReply.KeywordAutoReplyInfo_Item.reply_list_info">
+            <summary>
+            回复内容
+            </summary>
+        </member>
         <member name="P:Senparc.Weixin.MP.AdvancedAPIs.AutoReply.KeywordListInfoItem.type">
             <summary>
             自动回复的类型。关注后自动回复和消息自动回复的类型仅支持文本（text）、图片（img）、语音（voice）、视频（video），关键词自动回复则还多了图文消息（news）
@@ -8967,9 +8972,34 @@
             模板消息顶部颜色（16进制），默认为#FF0000
             </summary>
         </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel.url">
+            <summary>
+            模板跳转链接
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel.miniprogram">
+            <summary>
+            跳小程序所需数据，不需跳小程序可不用传该数据
+            </summary>
+        </member>
         <member name="P:Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel.data">
             <summary>
             数据
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel_MiniProgram">
+            <summary>
+            小程序定义
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel_MiniProgram.appid">
+            <summary>
+            小程序AppId
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel_MiniProgram.pagepath">
+            <summary>
+            路径，如：index?foo=bar
             </summary>
         </member>
         <member name="T:Senparc.Weixin.MP.AdvancedAPIs.TemplateApi">
@@ -8977,7 +9007,7 @@
             模板消息接口
             </summary>
         </member>
-        <member name="M:Senparc.Weixin.MP.AdvancedAPIs.TemplateApi.SendTemplateMessage(System.String,System.String,System.String,System.String,System.Object,System.Int32)">
+        <member name="M:Senparc.Weixin.MP.AdvancedAPIs.TemplateApi.SendTemplateMessage(System.String,System.String,System.String,System.String,System.Object,Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel_MiniProgram,System.Int32)">
             <summary>
             模板消息接口
             </summary>
@@ -8986,16 +9016,18 @@
             <param name="templateId"></param>
             <param name="url"></param>
             <param name="data"></param>
+            <param name="miniProgram">跳小程序所需数据，不需跳小程序可不用传该数据</param>
             <param name="timeOut">代理请求超时时间（毫秒）</param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.MP.AdvancedAPIs.TemplateApi.SendTemplateMessage(System.String,System.String,Senparc.Weixin.Entities.TemplateMessage.ITemplateMessageBase,System.Int32)">
+        <member name="M:Senparc.Weixin.MP.AdvancedAPIs.TemplateApi.SendTemplateMessage(System.String,System.String,Senparc.Weixin.Entities.TemplateMessage.ITemplateMessageBase,Senparc.Weixin.MP.AdvancedAPIs.TemplateMessage.TempleteModel_MiniProgram,System.Int32)">
             <summary>
             模板消息接口
             </summary>
             <param name="accessTokenOrAppId"></param>
             <param name="openId"></param>
             <param name="templateMessageData"></param>
+            <param name="miniProgram">跳小程序所需数据，不需跳小程序可不用传该数据</param>
             <param name="timeOut">代理请求超时时间（毫秒）</param>
             <returns></returns>
         </member>
@@ -10320,6 +10352,27 @@
             menuid
             </summary>
         </member>
+        <member name="T:Senparc.Weixin.MP.Entities.Menu.SingleMiniProgramButton">
+            <summary>
+            小程序按钮
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.Entities.Menu.SingleMiniProgramButton.url">
+            <summary>
+            类型为miniprogram时必须
+            小程序Url，用户点击按钮可打开小程序，不超过1024字节（不支持小程序的老版本客户端将打开本url）
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.Entities.Menu.SingleMiniProgramButton.appid">
+            <summary>
+            小程序的appid
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.Entities.Menu.SingleMiniProgramButton.pagepath">
+            <summary>
+            小程序的页面路径
+            </summary>
+        </member>
         <member name="T:Senparc.Weixin.MP.Entities.Menu.ConditionalButtonGroup">
             <summary>
             个性化菜单按钮集合
@@ -10463,7 +10516,7 @@
         <member name="P:Senparc.Weixin.MP.Entities.Menu.SingleViewButton.url">
             <summary>
             类型为view时必须
-            网页链接，用户点击按钮可打开链接，不超过256字节
+            网页链接，用户点击按钮可打开链接，不超过1024字节
             </summary>
         </member>
         <member name="T:Senparc.Weixin.MP.Entities.Menu.SingleScancodeWaitmsgButton">
@@ -11748,6 +11801,11 @@
             Url
             </summary>
         </member>
+        <member name="F:Senparc.Weixin.MP.ButtonType.miniprogram">
+            <summary>
+            小程序
+            </summary>
+        </member>
         <member name="F:Senparc.Weixin.MP.ButtonType.scancode_push">
             <summary>
             扫码推事件
@@ -12353,6 +12411,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Senparc.Weixin.MP.Helpers.JSSDKHelper">
+            <summary>
+            JS-SDK 帮助类
+            </summary>
+        </member>
         <member name="M:Senparc.Weixin.MP.Helpers.JSSDKHelper.GetNoncestr">
             <summary>
             获取随机字符串
@@ -12399,7 +12462,7 @@
             获取位置签名AddrSign
             </summary>
             <param name="appId"></param>
-            <param name="appSecret"></param>
+            <param name="oauthAccessToken">必须是OAuth的AccessToken</param>
             <param name="noncestr"></param>
             <param name="timestamp"></param>
             <param name="url"></param>
@@ -14220,9 +14283,19 @@
             公众账号ID
             </summary>
         </member>
+        <member name="P:Senparc.Weixin.MP.TenPayLibV3.TenPayV3OrderQueryRequestData.SubAppId">
+            <summary>
+            子商户公众账号ID
+            </summary>
+        </member>
         <member name="P:Senparc.Weixin.MP.TenPayLibV3.TenPayV3OrderQueryRequestData.MchId">
             <summary>
             商户号
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.TenPayLibV3.TenPayV3OrderQueryRequestData.SubMchId">
+            <summary>
+            子商户号
             </summary>
         </member>
         <member name="P:Senparc.Weixin.MP.TenPayLibV3.TenPayV3OrderQueryRequestData.TransactionId">
@@ -14250,17 +14323,31 @@
             
             </summary>
         </member>
-        <member name="M:Senparc.Weixin.MP.TenPayLibV3.TenPayV3OrderQueryRequestData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:Senparc.Weixin.MP.TenPayLibV3.TenPayV3OrderQueryRequestData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            查询订单 请求参数
+            查询订单 请求参数[境内服务商]
             </summary>
             <param name="appId"></param>
+            <param name="subAppId"></param>
             <param name="mchId"></param>
             <param name="outTradeNo"></param>
             <param name="signType"></param>
             <param name="key"></param>
+            <param name="subMchId"></param>
             <param name="transactionId"></param>
             <param name="nonceStr"></param>
+        </member>
+        <member name="M:Senparc.Weixin.MP.TenPayLibV3.TenPayV3OrderQueryRequestData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            查询订单 请求参数[境内普通商户]
+            </summary>
+            <param name="appId"></param>
+            <param name="mchId"></param>
+            <param name="transactionId"></param>
+            <param name="nonceStr"></param>
+            <param name="outTradeNo"></param>
+            <param name="key"></param>
+            <param name="signType"></param>
         </member>
         <member name="T:Senparc.Weixin.MP.TenPayLibV3.TenPayV3CloseOrderRequestData">
             <summary>
@@ -14342,6 +14429,16 @@
             微信支付分配的商户号
             </summary>
         </member>
+        <member name="P:Senparc.Weixin.MP.TenPayLibV3.Result.sub_appid">
+            <summary>
+            子商户公众账号ID
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.TenPayLibV3.Result.sub_mch_id">
+            <summary>
+            子商户号
+            </summary>
+        </member>
         <member name="P:Senparc.Weixin.MP.TenPayLibV3.Result.nonce_str">
             <summary>
             随机字符串，不长于32 位
@@ -14388,16 +14485,6 @@
             trade_type为NATIVE时有返回，此参数可直接生成二维码展示出来进行扫码支付
             </summary>
         </member>
-        <member name="P:Senparc.Weixin.MP.TenPayLibV3.UnifiedorderResult.sub_appid">
-            <summary>
-            子商户公众账号ID
-            </summary>
-        </member>
-        <member name="P:Senparc.Weixin.MP.TenPayLibV3.UnifiedorderResult.sub_mch_id">
-            <summary>
-            子商户号
-            </summary>
-        </member>
         <member name="T:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult">
             <summary>
             查询订单接口返回结果
@@ -14416,6 +14503,16 @@
         <member name="P:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult.is_subscribe">
             <summary>
             用户是否关注公众账号，Y-关注，N-未关注，仅在公众账号类型支付有效
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult.sub_openid">
+            <summary>
+            用户子标识[服务商]
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult.sub_is_subscribe">
+            <summary>
+            是否关注子公众账号[服务商]
             </summary>
         </member>
         <member name="P:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult.trade_type">
@@ -14437,6 +14534,11 @@
         <member name="P:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult.bank_type">
             <summary>
             银行类型，采用字符串类型的银行标识
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult.detail">
+            <summary>
+            商品详情[服务商]
             </summary>
         </member>
         <member name="P:Senparc.Weixin.MP.TenPayLibV3.OrderQueryResult.total_fee">
