@@ -2135,7 +2135,7 @@
             <param name="returnText"></param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.HttpUtility.Post.PostFileGetJson``1(System.String,System.Net.CookieContainer,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate,System.Int32)">
+        <member name="M:Senparc.Weixin.HttpUtility.Post.PostFileGetJson``1(System.String,System.Net.CookieContainer,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32)">
             <summary>
             发起Post请求，可上传文件
             </summary>
@@ -2149,7 +2149,7 @@
             <param name="postDataDictionary"></param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.HttpUtility.Post.PostGetJson``1(System.String,System.Net.CookieContainer,System.IO.Stream,System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate,System.Int32,System.Boolean)">
+        <member name="M:Senparc.Weixin.HttpUtility.Post.PostGetJson``1(System.String,System.Net.CookieContainer,System.IO.Stream,System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32,System.Boolean)">
             <summary>
             发起Post请求
             </summary>
@@ -2163,7 +2163,7 @@
             <param name="checkValidationResult">验证服务器证书回调自动验证</param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.HttpUtility.Post.PostGetJson``1(System.String,System.Net.CookieContainer,System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate,System.Int32)">
+        <member name="M:Senparc.Weixin.HttpUtility.Post.PostGetJson``1(System.String,System.Net.CookieContainer,System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32)">
             <summary>
             PostGetJson
             </summary>
@@ -2210,7 +2210,7 @@
             <param name="url"></param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.HttpUtility.RequestUtility.HttpGet(System.String,System.Net.CookieContainer,System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate,System.Int32)">
+        <member name="M:Senparc.Weixin.HttpUtility.RequestUtility.HttpGet(System.String,System.Net.CookieContainer,System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32)">
             <summary>
             使用Get方法获取字符串结果（加入Cookie）
             </summary>
@@ -2221,13 +2221,13 @@
             <param name="timeOut"></param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.HttpUtility.RequestUtility.HttpPost(System.String,System.Net.CookieContainer,System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate,System.Int32)">
+        <member name="M:Senparc.Weixin.HttpUtility.RequestUtility.HttpPost(System.String,System.Net.CookieContainer,System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32)">
             <summary>
             使用Post方法获取字符串结果，常规提交
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.HttpUtility.RequestUtility.HttpPost(System.String,System.Net.CookieContainer,System.IO.Stream,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate,System.Int32,System.Boolean)">
+        <member name="M:Senparc.Weixin.HttpUtility.RequestUtility.HttpPost(System.String,System.Net.CookieContainer,System.IO.Stream,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Text.Encoding,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32,System.Boolean)">
             <summary>
             使用Post方法获取字符串结果
             </summary>

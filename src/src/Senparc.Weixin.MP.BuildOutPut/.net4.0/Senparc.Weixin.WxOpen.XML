@@ -173,6 +173,11 @@
             <param name="sessionKey">SessionKey</param>
             <returns></returns>
         </member>
+        <member name="T:Senparc.Weixin.WxOpen.Entities.DecodedUserInfo">
+            <summary>
+            解码后的用户信息
+            </summary>
+        </member>
         <member name="T:Senparc.Weixin.WxOpen.Entities.Request.PostModel">
             <summary>
             微信公众服务器Post过来的加密参数集合（不包括PostData）
@@ -251,6 +256,11 @@
             只返回"success"等指定字符串的响应信息
             </summary>
         </member>
+        <member name="T:Senparc.Weixin.WxOpen.Entities.Watermark">
+            <summary>
+            水印
+            </summary>
+        </member>
         <member name="T:Senparc.Weixin.WxOpen.RequestMsgType">
             <summary>
             接收消息类型
@@ -278,7 +288,7 @@
         </member>
         <member name="T:Senparc.Weixin.WxOpen.Helpers.EncryptHelper">
             <summary>
-            EncryptHelper
+            签名及加密帮助类
             </summary>
         </member>
         <member name="M:Senparc.Weixin.WxOpen.Helpers.EncryptHelper.GetSignature(System.String,System.String)">
@@ -346,7 +356,7 @@
         </member>
         <member name="T:Senparc.Weixin.WxOpen.Helpers.SessionHelper">
             <summary>
-            SessionHelper
+            Session帮助类
             </summary>
         </member>
         <member name="M:Senparc.Weixin.WxOpen.Helpers.SessionHelper.GetNewThirdSessionName(System.Int32)">
@@ -355,6 +365,11 @@
             </summary>
             <param name="bSize">Session名称长度，单位：B，建议为16的倍数，通常情况下16B已经够用（32位GUID字符串）</param>
             <returns></returns>
+        </member>
+        <member name="T:Senparc.Weixin.WxOpen.Helpers.MsgTypeHelper">
+            <summary>
+            消息类型帮助类
+            </summary>
         </member>
         <member name="M:Senparc.Weixin.WxOpen.Helpers.MsgTypeHelper.GetRequestMsgType(System.Xml.Linq.XDocument)">
             <summary>
