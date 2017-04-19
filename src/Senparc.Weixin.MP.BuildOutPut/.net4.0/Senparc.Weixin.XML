@@ -362,6 +362,11 @@
             当前对象被缓存的时间
             </summary>
         </member>
+        <member name="T:Senparc.Weixin.Containers.IBaseContainerBag_AppId">
+            <summary>
+            提供给具有 AppId 的 IBaseContainerBag 使用的接口
+            </summary>
+        </member>
         <member name="P:Senparc.Weixin.Containers.IBaseContainerBag_AppId.AppId">
             <summary>
             AppId
