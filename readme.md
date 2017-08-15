@@ -1,3 +1,6 @@
+# 注意：此分支为内部测试分支，使用代码请到 master 分支，提交代码请到 Developer 分支，谢谢！
+
+
 Senparc.Weixin —— 微信 .NET SDK [![Build Status](https://travis-ci.org/JeffreySu/WeiXinMPSDK.svg?branch=master)](https://travis-ci.org/JeffreySu/WeiXinMPSDK)
 =================
 
