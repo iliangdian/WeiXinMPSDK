@@ -1,5 +1,8 @@
-（说明：此.net 3.5版本已经不再更新，最新代码请看master分支）
+（说明：此分支已经不再更新， .net 3.5 最新代码请看 master 或 Developer 分支）
 =================
+
+
+
 
 微信公众平台及企业号C# SDK：Senparc.Weixin.MP.dll、Senparc.Weixin.QY.dll
 =================
